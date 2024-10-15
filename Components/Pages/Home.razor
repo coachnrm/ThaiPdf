@@ -1,0 +1,38 @@
+﻿@page "/"
+@using PdfTest.Service
+@using Microsoft.JSInterop;
+@using Microsoft.AspNetCore.Mvc;
+@rendermode InteractiveServer
+
+
+@inject PdfService PdfService
+@inject IJSRuntime JS
+
+<h3>PDF Generator</h3>
+
+<input @bind="Title" placeholder="Enter Title" />
+<input @bind="Content" placeholder="Enter Content" />
+<button @onclick="GeneratePdf">Generate PDF</button>
+
+@code {
+    private string Title {get; set;}
+    private string Content {get; set;}
+
+    private async Task GeneratePdf()
+    {
+        var pdfBytes = await PdfService.GeneratePdfAsync(Title, Content);
+
+        // Download the PDF
+        using var stream = new MemoryStream(pdfBytes);
+        var fileName = "generated.pdf";
+
+        // Create a file result for download
+        var fileStreamResult = new FileStreamResult(stream, "application/pdf")
+        {
+            FileDownloadName = fileName
+        };
+
+        // Trigger the download
+        await JS.InvokeVoidAsync("downloadFile", fileName, Convert.ToBase64String(pdfBytes));
+    }
+}

@@ -1,0 +1,49 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\PdfTest\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PdfTest.bundle.scp.css",
+      "PackagePath": "staticwebassets\\PdfTest.bundle.scp.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\app.css",
+      "PackagePath": "staticwebassets\\app.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\example.js",
+      "PackagePath": "staticwebassets\\example.js"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\fonts\\NotoSans-Regular.ttf",
+      "PackagePath": "staticwebassets\\fonts\\NotoSans-Regular.ttf"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.PdfTest.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.PdfTest.props",
+      "PackagePath": "build\\PdfTest.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.PdfTest.props",
+      "PackagePath": "buildMultiTargeting\\PdfTest.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.PdfTest.props",
+      "PackagePath": "buildTransitive\\PdfTest.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
