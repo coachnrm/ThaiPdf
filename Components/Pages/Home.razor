@@ -8,12 +8,14 @@
 
 @inject IPersonService personService
 @inject PdfService PdfService
+@inject PdfServiceById PdfServiceById
 @inject IJSRuntime JS
 
 <h3>PDF Generator</h3>
 
 @* <input @bind="Title" placeholder="Enter Title" />
 <input @bind="Content" placeholder="Enter Content" /> *@
+<a href="/person/add" class="btn btn-outline-dark my-2">Add more</a>
 <div class="row">
     <div class="col-md-6">
         <table class="table table-striped">
@@ -22,6 +24,7 @@
                     <th>Id</th>
                     <th>ชื่อ</th>
                     <th>อาชีพ</th>
+                    <th>Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,22 +34,45 @@
                     <td>@person.Id</td>
                     <td>@person.Name</td>
                     <td>@person.Occupation</td>
+                    <td>
+                        <a href="/person/edit/@person.Id" class="btn btn-success">Edit</a>
+                        <a class="btn btn-danger" @onclick="async ()=> await Delete(person)">Delete</a>
+                    </td>
                 </tr>
             }
             </tbody>
         </table>
     </div>
 </div>
-<button @onclick="GeneratePdf">Generate PDF</button>
+<button @onclick="GeneratePdf" class="btn btn-primary">Generate PDF</button>
 
 @code {
     private string Title = "รายงาน";
     private string Content = "ผลของข้อมูล";
     private List<Person> persons = new();
 
+    private Person person = new();
+
+    private async Task Delete(Person person)
+    {
+        bool confirmed = await JS.InvokeAsync<bool>("confirm", "Are you sure???");
+        if (confirmed)
+        {
+            if(personService.Delete(person.Id))
+            {
+                persons.Remove(person);
+            }
+        }
+    }
+
     protected override void OnInitialized()
     {
         persons = personService.GetAll();
+    }
+
+    public Person FindById(int id)
+    {
+        return persons.FirstOrDefault(p => p.Id == id);
     }
 
     private async Task GeneratePdf()
@@ -66,4 +92,23 @@
         // Trigger the download
         await JS.InvokeVoidAsync("downloadFile", fileName, Convert.ToBase64String(pdfBytes));
     }
+
+    @* private async Task GeneratePdfById()
+    {
+        var pdfBytes = await PdfServiceById.GeneratePdfAsync(person);
+
+        // Download the PDF
+        using var stream = new MemoryStream(pdfBytes);
+        var fileName = "generated.pdf";
+
+        // Create a file result for download
+        var fileStreamResult = new FileStreamResult(stream, "application/pdf")
+        {
+            FileDownloadName = fileName
+        };
+
+        // Trigger the download
+        await JS.InvokeVoidAsync("downloadFile", fileName, Convert.ToBase64String(pdfBytes));
+    } *@
+
 }

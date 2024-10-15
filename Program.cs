@@ -13,6 +13,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 builder.Services.AddScoped<PdfService>();
+builder.Services.AddScoped<PdfServiceById>();
 builder.Services.AddScoped<IPersonService, PersonService>();
 
 var app = builder.Build();
