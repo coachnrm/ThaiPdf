@@ -46,3 +46,4 @@ C:\Users\Admin\Desktop\PdfTest\obj\Debug\net8.0\PdfTest.genruntimeconfig.cache
 C:\Users\Admin\Desktop\PdfTest\obj\Debug\net8.0\ref\PdfTest.dll
 C:\Users\Admin\Desktop\PdfTest\bin\Debug\net8.0\BouncyCastle.Cryptography.dll
 C:\Users\Admin\Desktop\PdfTest\bin\Debug\net8.0\itext.bouncy-castle-adapter.dll
+C:\Users\Admin\Desktop\PdfTest\obj\Debug\net8.0\PdfTest.sourcelink.json
