@@ -1,26 +1,57 @@
 ﻿@page "/"
+@using PdfTest.Models
 @using PdfTest.Service
 @using Microsoft.JSInterop;
 @using Microsoft.AspNetCore.Mvc;
+@using PdfTest.Service;
 @rendermode InteractiveServer
 
-
+@inject IPersonService personService
 @inject PdfService PdfService
 @inject IJSRuntime JS
 
 <h3>PDF Generator</h3>
 
-<input @bind="Title" placeholder="Enter Title" />
-<input @bind="Content" placeholder="Enter Content" />
+@* <input @bind="Title" placeholder="Enter Title" />
+<input @bind="Content" placeholder="Enter Content" /> *@
+<div class="row">
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>ชื่อ</th>
+                    <th>อาชีพ</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach(var person in persons)
+            {
+                <tr>
+                    <td>@person.Id</td>
+                    <td>@person.Name</td>
+                    <td>@person.Occupation</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
 <button @onclick="GeneratePdf">Generate PDF</button>
 
 @code {
-    private string Title {get; set;}
-    private string Content {get; set;}
+    private string Title = "รายงาน";
+    private string Content = "ผลของข้อมูล";
+    private List<Person> persons = new();
+
+    protected override void OnInitialized()
+    {
+        persons = personService.GetAll();
+    }
 
     private async Task GeneratePdf()
     {
-        var pdfBytes = await PdfService.GeneratePdfAsync(Title, Content);
+        var pdfBytes = await PdfService.GeneratePdfAsync(Title, Content, persons);
 
         // Download the PDF
         using var stream = new MemoryStream(pdfBytes);
