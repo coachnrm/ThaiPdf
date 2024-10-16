@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "etElnH5wx+pd+ECdavro052Ldp363as+uck7Uhh3zRY=",
+  "Hash": "/zT+RZJA20KDGSCEygdKdyVoVssuZFkRZg5SqLY1tUk=",
   "Source": "PdfTest",
   "BasePath": "_content/PdfTest",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "PdfTest\\wwwroot",
       "Source": "PdfTest",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\",
+      "ContentRoot": "D:\\ThaiPdf\\wwwroot\\",
       "BasePath": "_content/PdfTest",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\PdfTest\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PdfTest.styles.css",
+      "Identity": "D:\\ThaiPdf\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PdfTest.styles.css",
       "SourceId": "PdfTest",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\PdfTest\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
+      "ContentRoot": "D:\\ThaiPdf\\obj\\Debug\\net8.0\\scopedcss\\bundle\\",
       "BasePath": "_content/PdfTest",
       "RelativePath": "PdfTest.styles.css",
       "AssetKind": "All",
@@ -33,13 +33,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\Desktop\\PdfTest\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PdfTest.styles.css"
+      "OriginalItemSpec": "D:\\ThaiPdf\\obj\\Debug\\net8.0\\scopedcss\\bundle\\PdfTest.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\PdfTest\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PdfTest.bundle.scp.css",
+      "Identity": "D:\\ThaiPdf\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PdfTest.bundle.scp.css",
       "SourceId": "PdfTest",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\PdfTest\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "D:\\ThaiPdf\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/PdfTest",
       "RelativePath": "PdfTest.bundle.scp.css",
       "AssetKind": "All",
@@ -52,13 +52,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Admin\\Desktop\\PdfTest\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PdfTest.bundle.scp.css"
+      "OriginalItemSpec": "D:\\ThaiPdf\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\PdfTest.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\app.css",
+      "Identity": "D:\\ThaiPdf\\wwwroot\\app.css",
       "SourceId": "PdfTest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\",
+      "ContentRoot": "D:\\ThaiPdf\\wwwroot\\",
       "BasePath": "_content/PdfTest",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -74,10 +74,10 @@
       "OriginalItemSpec": "wwwroot\\app.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\bootstrap\\bootstrap.min.css",
+      "Identity": "D:\\ThaiPdf\\wwwroot\\bootstrap\\bootstrap.min.css",
       "SourceId": "PdfTest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\",
+      "ContentRoot": "D:\\ThaiPdf\\wwwroot\\",
       "BasePath": "_content/PdfTest",
       "RelativePath": "bootstrap/bootstrap.min.css",
       "AssetKind": "All",
@@ -93,10 +93,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\bootstrap\\bootstrap.min.css.map",
+      "Identity": "D:\\ThaiPdf\\wwwroot\\bootstrap\\bootstrap.min.css.map",
       "SourceId": "PdfTest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\",
+      "ContentRoot": "D:\\ThaiPdf\\wwwroot\\",
       "BasePath": "_content/PdfTest",
       "RelativePath": "bootstrap/bootstrap.min.css.map",
       "AssetKind": "All",
@@ -112,10 +112,10 @@
       "OriginalItemSpec": "wwwroot\\bootstrap\\bootstrap.min.css.map"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\example.js",
+      "Identity": "D:\\ThaiPdf\\wwwroot\\example.js",
       "SourceId": "PdfTest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\",
+      "ContentRoot": "D:\\ThaiPdf\\wwwroot\\",
       "BasePath": "_content/PdfTest",
       "RelativePath": "example.js",
       "AssetKind": "All",
@@ -131,10 +131,10 @@
       "OriginalItemSpec": "wwwroot\\example.js"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\favicon.png",
+      "Identity": "D:\\ThaiPdf\\wwwroot\\favicon.png",
       "SourceId": "PdfTest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\",
+      "ContentRoot": "D:\\ThaiPdf\\wwwroot\\",
       "BasePath": "_content/PdfTest",
       "RelativePath": "favicon.png",
       "AssetKind": "All",
@@ -150,10 +150,10 @@
       "OriginalItemSpec": "wwwroot\\favicon.png"
     },
     {
-      "Identity": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\fonts\\NotoSans-Regular.ttf",
+      "Identity": "D:\\ThaiPdf\\wwwroot\\fonts\\NotoSans-Regular.ttf",
       "SourceId": "PdfTest",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Admin\\Desktop\\PdfTest\\wwwroot\\",
+      "ContentRoot": "D:\\ThaiPdf\\wwwroot\\",
       "BasePath": "_content/PdfTest",
       "RelativePath": "fonts/NotoSans-Regular.ttf",
       "AssetKind": "All",

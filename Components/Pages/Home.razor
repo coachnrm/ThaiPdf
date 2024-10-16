@@ -35,6 +35,7 @@
                     <td>@person.Name</td>
                     <td>@person.Occupation</td>
                     <td>
+                        <button @onclick="async ()=> await DownloadPdf(person.Id)" class="btn btn-primary">Print</button>
                         <a href="/person/edit/@person.Id" class="btn btn-success">Edit</a>
                         <a class="btn btn-danger" @onclick="async ()=> await Delete(person)">Delete</a>
                     </td>
@@ -52,6 +53,27 @@
     private List<Person> persons = new();
 
     private Person person = new();
+
+     private async Task DownloadPdf(int x)
+    {
+        person = personService.FindById(x);
+        if (person != null)
+        {
+            var pdfBytes = await PdfServiceById.GeneratePdfAsync(person);
+            // Download the PDF
+            using var stream = new MemoryStream(pdfBytes);
+            var fileName = "generated.pdf";
+
+            // Create a file result for download
+            var fileStreamResult = new FileStreamResult(stream, "application/pdf")
+            {
+                FileDownloadName = fileName
+            };
+
+            // Trigger the download
+            await JS.InvokeVoidAsync("downloadFile", fileName, Convert.ToBase64String(pdfBytes));
+        }
+    }
 
     private async Task Delete(Person person)
     {
@@ -92,6 +114,8 @@
         // Trigger the download
         await JS.InvokeVoidAsync("downloadFile", fileName, Convert.ToBase64String(pdfBytes));
     }
+
+    
 
     @* private async Task GeneratePdfById()
     {
