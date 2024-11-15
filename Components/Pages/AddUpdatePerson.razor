@@ -1,4 +1,4 @@
-@page "/person/add"
+@* @page "/person/add"
 @page "/person/edit/{userId:int}"
 @using PdfTest.Service
 @using PdfTest.Models
@@ -80,4 +80,88 @@
         }
     }
 
+}  *@
+
+@page "/person/add"
+@page "/person/edit/{UserId:int}"
+@using PdfTest.Service
+@using PdfTest.Models
+@using Microsoft.JSInterop
+@inject IPersonService personService
+@inject PdfServiceById PdfServiceById
+@inject IJSRuntime JS
+
+<div class="row">
+    <div class="col-md-6">
+        <EditForm Model="@person" OnValidSubmit="Save">
+            <DataAnnotationsValidator />
+            <div class="form-group">
+                <label for="Name">ชื่อ</label>
+                <InputText class="form-control" @bind-Value="person.Name" />
+                <ValidationMessage For="@(() => person.Name)" />
+            </div>
+            <div class="form-group">
+                <label for="Occupation">อาชีพ</label>
+                <InputText class="form-control" @bind-Value="person.Occupation" />
+                <ValidationMessage For="@(() => person.Occupation)" />
+            </div>
+            <div class="my-2">
+                @message
+            </div>
+            <div class="my-2">
+                <button type="submit" class="btn btn-primary" disabled="@isSaving">Save</button>
+            </div>
+        </EditForm>
+    </div>
+</div>
+
+@code {
+    [Parameter] public int UserId { get; set; }
+    private string message = string.Empty;
+    private bool isSaving = false;  // To manage button state
+    private Person person = new();
+    private string Title = "Add Person";
+
+    private async Task Save()
+    {
+        isSaving = true;
+        message = "Wait...";
+
+        // Save person
+        bool isSaved = personService.AddUpdate(person);
+        if (isSaved)
+        {
+            message = "Successfully added!";
+            person = new();  // Reset form
+        }
+        else
+        {
+            message = "Could not save.";
+        }
+
+        isSaving = false;
+    }
+
+    protected override void OnInitialized()
+    {
+        if (UserId > 0)
+        {
+            Title = "Update Person";
+            person = personService.FindById(UserId) ?? new Person(); // Handle null case
+        }
+        base.OnInitialized();
+    }
+
+    private async Task DownloadPdf()
+    {
+        if (person != null)
+        {
+            var pdfBytes = await PdfServiceById.GeneratePdfAsync(person);
+            var base64 = Convert.ToBase64String(pdfBytes);
+            var url = $"data:application/pdf;base64,{base64}";
+
+            // Trigger the download in the browser
+            await JS.InvokeVoidAsync("open", url, "_blank");
+        }
+    }
 }

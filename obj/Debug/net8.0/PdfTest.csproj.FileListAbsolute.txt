@@ -213,7 +213,6 @@ D:\ThaiPdf\bin\Debug\net8.0\System.Memory.Data.dll
 D:\ThaiPdf\bin\Debug\net8.0\System.Runtime.Caching.dll
 D:\ThaiPdf\bin\Debug\net8.0\System.Security.Cryptography.ProtectedData.dll
 D:\ThaiPdf\bin\Debug\net8.0\System.Security.Permissions.dll
-D:\ThaiPdf\bin\Debug\net8.0\System.Text.Json.dll
 D:\ThaiPdf\bin\Debug\net8.0\System.Windows.Extensions.dll
 D:\ThaiPdf\bin\Debug\net8.0\cs\Microsoft.CodeAnalysis.resources.dll
 D:\ThaiPdf\bin\Debug\net8.0\de\Microsoft.CodeAnalysis.resources.dll
@@ -297,9 +296,9 @@ D:\ThaiPdf\obj\Debug\net8.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.
 D:\ThaiPdf\obj\Debug\net8.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 D:\ThaiPdf\obj\Debug\net8.0\scopedcss\bundle\PdfTest.styles.css
 D:\ThaiPdf\obj\Debug\net8.0\scopedcss\projectbundle\PdfTest.bundle.scp.css
-D:\ThaiPdf\obj\Debug\net8.0\PdfTest.csproj.CopyComplete
 D:\ThaiPdf\obj\Debug\net8.0\PdfTest.dll
 D:\ThaiPdf\obj\Debug\net8.0\refint\PdfTest.dll
 D:\ThaiPdf\obj\Debug\net8.0\PdfTest.pdb
 D:\ThaiPdf\obj\Debug\net8.0\PdfTest.genruntimeconfig.cache
 D:\ThaiPdf\obj\Debug\net8.0\ref\PdfTest.dll
+D:\ThaiPdf\obj\Debug\net8.0\PdfTest.csproj.Up2Date
